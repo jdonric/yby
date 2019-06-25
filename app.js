@@ -7,6 +7,8 @@ var ejs = require('ejs');
 var ejsLint = require('ejs-lint');
 const mongoose = require('mongoose');
 
+var port = process.env.PORT || 4000;
+
 
 var app = express();
 app.set('view engine', 'ejs');
@@ -43,6 +45,6 @@ app.get('/order', function(req, res){
 
 
 //LISTENING
-app.listen(4000, function (req, res){
+app.listen(port, function (req, res){
     console.log(`TUNED INTO 4000`);
 });
